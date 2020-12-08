@@ -24,6 +24,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         const newWeatherCard = createWeatherCard(cardData);
 
+        const cities = document.querySelector("#cities");
         cities.innerHTML = cities.innerHTML ? cities.innerHTML + newWeatherCard : newWeatherCard;
         
       })
@@ -46,6 +47,7 @@ window.addEventListener("DOMContentLoaded", function () {
   </li>`;
   }
 
+  const search_form = document.querySelector("#search_form");
   search_form.addEventListener("submit", function (event) {
     event.preventDefault();
 
