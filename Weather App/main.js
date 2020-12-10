@@ -1,13 +1,13 @@
 const baseUrl =
-  "http://api.openweathermap.org/data/2.5/weather?q={city name},{state code}&appid={API key}";
+  "https://api.openweathermap.org/data/2.5/weather?q={city name},{state code}&appid={API key}";
 const apiKey = "7c72c4660455669edf14877fb6257619";
-const apiImgUrl = "http://openweathermap.org/img/wn/{icon}@2x.png";
+const apiImgUrl = "https://openweathermap.org/img/wn/{icon}@2x.png";
 
 window.addEventListener("DOMContentLoaded", function () {
   // function for fetching weather data from API
   function findWeatherByCity(city) {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
     )
       .then((response) => {
         return response.json();
